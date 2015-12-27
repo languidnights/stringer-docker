@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t antonlindstrom/stringer .
+docker build -t languidnights/stringer .
 docker run --name stringer_db -d postgres:9.3
 
 sleep 10
@@ -22,4 +22,4 @@ docker run --name stringer_web \
 -e STRINGER_DATABASE_PASSWORD="$DB_PASSWORD" \
 -e STRINGER_DATABASE="stringerdb" \
 -p 5000:5000 -d \
---link stringer_db:postgres antonlindstrom/stringer
+--link stringer_db:postgres languidnights/stringer

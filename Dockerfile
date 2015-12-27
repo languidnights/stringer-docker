@@ -36,4 +36,5 @@ EXPOSE 5000
 
 ADD ./clock.rb /stringer/clock.rb
 ADD ./run.sh /stringer/run.sh
+COPY ./config.ru /stringer/config.ru
 CMD bash /stringer/run.sh
